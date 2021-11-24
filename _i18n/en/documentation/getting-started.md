@@ -1,4 +1,4 @@
-First, you want to subscribe to a podcast. You can find more about that [here](/documentation/getting-started/subscribe). After subscribing, new episodes are shown on `Episodes` » `New`. There you can decide if you actually like to listen to them or not. `New` means that you have not yet decided what to do with the episode.
+Firstly, you want to subscribe to a podcast. You can find more about that [here](/documentation/getting-started/subscribe). After subscribing, new episodes are shown on `Episodes` » `New`. There you can decide if you actually like to listen to them or not. `New` means that you have not yet decided what to do with the episode.
 
 - If you are not interested in an episode, just swipe it away and AntennaPod removes the `new` flag. The episode still stays marked as unplayed and you can find it on the `Episodes` » `All` page, as well as on the podcast's page.
 - If you are interested in the episode, you can do one of two things, depending on your listening behavior.
