@@ -34,4 +34,5 @@ jobs:
           BRANCH: translation-files # The branch name where you want to push the assets
           FOLDER: _i18n/PO-files # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
-          MESSAGE: "Update PO files" # The commit message
+          MESSAGE: "Update EN PO files" # The commit message
+          SKIP_EMPTY_COMMITS: true # only push commits if the contents of the target branch will be changed as a result
