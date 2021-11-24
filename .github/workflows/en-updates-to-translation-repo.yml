@@ -25,7 +25,7 @@ jobs:
       - run: cd ${{ github.workspace }}
       - run: ls -a
       - name: Create/update PO file of Contribute section
-        run: md2po _i18n/en/contribute/*.md --po-filepath _i18n/PO-files/site-contribute_en.PO --save
+        run: md2po ./_i18n/en/contribute/*.md --po-filepath ./_i18n/PO-files/site-contribute_en.PO --save
         # not sure how this PO-filepath interacts with the target folder of git-publish-subdir-action
         # see https://mdpo.readthedocs.io
       - name: Create/update PO file of Documentation section
