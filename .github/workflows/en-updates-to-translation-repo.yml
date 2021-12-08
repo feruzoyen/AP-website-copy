@@ -26,8 +26,6 @@ jobs:
         run: md2po _i18n/en/documentation/*/*.md _i18n/en/documentation/*.md --po-filepath _i18n/translation-files/site-documentation.pot --save --quiet
       - name: Create/update POT file of other website pages
         run: md2po _i18n/en/general/*.md --po-filepath _i18n/translation-files/site-general.pot --save --quiet
-      - name: Specify files for replacing on target branch
-        run: echo -e "!translations/contribute/*\n!translations/documentation/*\n!translations/general/*\n!translations/short-texts/*" >> .clear-target-files
       - name: Push to translations branch
         uses: s0/git-publish-subdir-action@v2.5.0
         # see https://github.com/s0/git-publish-subdir-action
@@ -38,4 +36,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Update POT files @ {long-sha}🚀" # The commit message
           SKIP_EMPTY_COMMITS: true # only push commits if the contents of the target branch will be changed as a result
-          CLEAR_GLOBS_FILE: ".clear-target-files"
+          CLEAR_GLOBS_FILE: ".github/workflows/.clear-target-files"
