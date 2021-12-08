@@ -26,6 +26,7 @@ jobs:
         run: md2po _i18n/en/documentation/*/*.md _i18n/en/documentation/*.md --po-filepath _i18n/translation-files/site-documentation.pot --save --quiet
       - name: Create/update POT file of other website pages
         run: md2po _i18n/en/general/*.md --po-filepath _i18n/translation-files/site-general.pot --save --quiet
+      - run: ls -a
       - name: Push to translations branch
         uses: s0/git-publish-subdir-action@v2.5.0
         # see https://github.com/s0/git-publish-subdir-action
