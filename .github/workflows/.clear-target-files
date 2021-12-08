@@ -1,4 +1,5 @@
 **/*
+!.git
 !translations/contribute-pages/*
 !translations/documentation-pages/*
 !translations/general-pages/*
