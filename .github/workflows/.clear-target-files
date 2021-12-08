@@ -1,5 +1,6 @@
-**/*
-!.git
+**/* #wipe all in translation-files branch
+!.git #required for the github action to work
+#list of folders in translation-files branch to keep:
 !translations/contribute-pages/*
 !translations/documentation-pages/*
 !translations/general-pages/*
