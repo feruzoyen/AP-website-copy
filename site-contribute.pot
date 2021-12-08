@@ -142,10 +142,10 @@ msgstr ""
 
 #: _i18n/en/contribute/promote.md:block 1 (paragraph)
 msgid ""
-"AntennaPod fully relies on free publicity, word-of-mouth, and a modest "
-"social media presence for its promotion. We know there's room for "
-"improvement. And you might have thought that as well. Why not help us grow "
-"bigger? Your help in any of the following areas will be much appreciated."
+"AntennaPod relies on free publicity, word-of-mouth, and a modest social "
+"media presence for its promotion. We know there's room for improvement. And "
+"you might have thought that as well. Why not help us grow bigger? Your help "
+"in any of the following areas will be much appreciated."
 msgstr ""
 
 #: _i18n/en/contribute/promote.md:block 2 (unordered list)
