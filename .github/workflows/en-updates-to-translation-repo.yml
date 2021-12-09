@@ -12,24 +12,27 @@ jobs:
     name: Update PO files
     runs-on: ubuntu-latest
     steps:
-      - name: Get repository
         # checks out your repository and downloads it to the runner, allowing you to run actions against your code
+      - name: Get repository
         uses: actions/checkout@v2
       - name: Install mdpo
         run: pip install mdpo
-      - run: mkdir _i18n/translation-files
-      - run: cp _i18n/en.yml _i18n/translation-files #IS THIS CORRECT?
+      - name: Create folder structure for translated files
+        run: mkdir -p _i18n/translation-files/translations/contribute-pages _i18n/translation-files/translations/documentation-pages _i18n/translation-files/translations/general-pages _i18n/translation-files/translations/general-strings
+      - name: Create/update YAML file with short texts
+        # translated files are not copied because translation is done in Weblate - any manual translation edits will be lost
+        run: cp _i18n/en.yml _i18n/translation-files
       - name: Create/update POT file of Contribute section
-        run: md2po _i18n/en/contribute/*.md --po-filepath _i18n/translation-files/site-contribute.pot --save --quiet
         # see https://mdpo.readthedocs.io
+        run: md2po _i18n/en/contribute/*.md --po-filepath _i18n/translation-files/site-contribute.pot --save --quiet
       - name: Create/update POT file of Documentation section
-        run: md2po _i18n/en/documentation/*/*.md _i18n/en/documentation/*.md --po-filepath _i18n/translation-files/site-documentation.pot --save --quiet
+        run: md2po _i18n/en/documentation/*.md _i18n/en/documentation/*/*.md --po-filepath _i18n/translation-files/site-documentation.pot --save --quiet
       - name: Create/update POT file of other website pages
         run: md2po _i18n/en/general/*.md --po-filepath _i18n/translation-files/site-general.pot --save --quiet
       - run: ls -a
       - name: Push to translations branch
-        uses: s0/git-publish-subdir-action@v2.5.0
         # see https://github.com/s0/git-publish-subdir-action
+        uses: s0/git-publish-subdir-action@v2.5.0
         env:
           REPO: self
           BRANCH: translation-files # The branch name where you want to push the assets
@@ -37,4 +40,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Update POT files @ {long-sha}🚀" # The commit message
           SKIP_EMPTY_COMMITS: true # only push commits if the contents of the target branch will be changed as a result
-          CLEAR_GLOBS_FILE: ".github/workflows/.clear-target-files"
+          CLEAR_GLOBS_FILE: ".github/workflows/.clear-target-files" # delete items in target branch as listed in this file

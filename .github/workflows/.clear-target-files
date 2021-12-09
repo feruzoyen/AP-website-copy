@@ -1,4 +1,4 @@
-**/* #wipe all in translation-files branch
+**/* #wipe all in translation-files branch (to delete any accidentally/manually added files)
 !.git #required for the github action to work
 #list of folders in translation-files branch to keep:
 !translations/contribute-pages/*
