@@ -154,12 +154,20 @@ msgid ""
 "awesome project!"
 msgstr ""
 
-#: _i18n/en/general/download.md:block 1 (paragraph)
+#: _i18n/en/general/download.md:block 4 (paragraph)
+msgid "Get it on Google Play"
+msgstr ""
+
+#: _i18n/en/general/download.md:block 9 (paragraph)
+msgid "Get it on F-Droid"
+msgstr ""
+
+#: _i18n/en/general/download.md:block 13 (paragraph)
 msgid ""
 "You can download official AntennaPod builds on Google Play and on F-Droid."
 msgstr ""
 
-#: _i18n/en/general/download.md:block 4 (paragraph)
+#: _i18n/en/general/download.md:block 16 (paragraph)
 msgid ""
 "AntennaPod is only officially published in above two stores because we don't"
 " have the time to support more. All other stores listing AntennaPod copied "

@@ -293,15 +293,19 @@ msgid ""
 "url](https://play.google.com/apps/testing/de.danoeh.antennapod)."
 msgstr ""
 
-#: _i18n/en/documentation/general/beta.md:block 7 (header)
+#: _i18n/en/documentation/general/beta.md:block 9 (paragraph)
+msgid "Become a beta tester - confirmation window in Google Play"
+msgstr ""
+
+#: _i18n/en/documentation/general/beta.md:block 13 (header)
 msgid "F-Droid"
 msgstr ""
 
-#: _i18n/en/documentation/general/beta.md:block 8 (paragraph)
+#: _i18n/en/documentation/general/beta.md:block 14 (paragraph)
 msgid "We do not currently offer beta versions on the F-Droid store."
 msgstr ""
 
-#: _i18n/en/documentation/general/beta.md:block 9 (paragraph)
+#: _i18n/en/documentation/general/beta.md:block 15 (paragraph)
 msgid ""
 "This is because F-Droid [does "
 "not](https://gitlab.com/fdroid/fdroidserver/-/issues/161) automatically "
@@ -449,36 +453,42 @@ msgid ""
 "SD card as internal storage. Else, there is nothing we can do to fix this."
 msgstr ""
 
-#: _i18n/en/documentation/general/gpodder.md:block 1 (paragraph)
+#: _i18n/en/documentation/general/gpodder.md:block 4 (paragraph)
+msgid "devices"
+msgstr ""
+
+#: _i18n/en/documentation/general/gpodder.md:block 9 (paragraph)
+msgid "synchronize"
+msgstr ""
+
+#: _i18n/en/documentation/general/gpodder.md:block 13 (paragraph)
 msgid ""
 "For synchronization, AntennaPod uses the free service gpodder.net. In order "
 "to synchronize your clients, you need to create an account there."
 msgstr ""
 
-#: _i18n/en/documentation/general/gpodder.md:block 2 (unordered list)
+#: _i18n/en/documentation/general/gpodder.md:block 14 (unordered list)
 msgid ""
 "After you created the account, we suggest to create a device on "
-"gpodder.net/devices/ for each client that you use: "
-"![devices](/assets/images/documentation/{{ site.lang }}/gpodder-devices.png)"
+"gpodder.net/devices/ for each client that you use:"
 msgstr ""
 
-#: _i18n/en/documentation/general/gpodder.md:block 2 (unordered list)
+#: _i18n/en/documentation/general/gpodder.md:block 14 (unordered list)
 msgid ""
 "After you created the devices, link them using the \"Configure\" button. "
 "This way, gpodder.net automatically keeps the subscriptions of both devices "
-"synchronized. ![synchronize](/assets/images/documentation/{{ site.lang "
-"}}/gpodder-synchronize.png)"
+"synchronized."
 msgstr ""
 
-#: _i18n/en/documentation/general/gpodder.md:block 2 (unordered list)
+#: _i18n/en/documentation/general/gpodder.md:block 14 (unordered list)
 msgid ""
 "Then, have a look at AntennaPod's `Settings` » `Synchronization`). There you"
 " can log in to gpodder.net or even provide an alternative server if you want"
 " to host it yourself. During login, AntennaPod asks what device you are "
-"currently logged into. Select your newly created device. You can also create"
-" a new device while logging in and link it later. The disadvantage of this "
-"is that only podcasts that were added **after** linking the devices are "
-"synchronized. Therefore, in order to get all your existing subscriptions "
+"currently logged into. Select your newly created device.<br /> You can also "
+"create a new device while logging in and link it later. The disadvantage of "
+"this is that only podcasts that were added **after** linking the devices are"
+" synchronized. Therefore, in order to get all your existing subscriptions "
 "synchronized, you need to create and link the devices **before** logging in "
 "(like it is described in this post). There is an [open issue for "
 "gpodder.net](https://github.com/gpodder/mygpo/issues/388) that requests to "
@@ -486,11 +496,11 @@ msgid ""
 "synchronizing."
 msgstr ""
 
-#: _i18n/en/documentation/general/gpodder.md:block 2 (unordered list)
+#: _i18n/en/documentation/general/gpodder.md:block 14 (unordered list)
 msgid "Enjoy synchronization :)"
 msgstr ""
 
-#: _i18n/en/documentation/general/gpodder.md:block 3 (paragraph)
+#: _i18n/en/documentation/general/gpodder.md:block 15 (paragraph)
 msgid ""
 "Old AntennaPod versions only upload the \"played\" state of episodes after "
 "signing in, so your old played episodes are not marked as played on the "
@@ -837,29 +847,32 @@ msgid ""
 " you download an episode, AntennaPod adds it to the queue automatically."
 msgstr ""
 
-#: _i18n/en/documentation/queue/lock.md:block 1 (paragraph)
+#: _i18n/en/documentation/queue/lock.md:block 4 (paragraph)
+msgid "Unlocking the queue"
+msgstr ""
+
+#: _i18n/en/documentation/queue/lock.md:block 8 (paragraph)
 msgid ""
 "A pretty common problem experienced by users is that they suddenly can not "
 "manually reorder the queue."
 msgstr ""
 
-#: _i18n/en/documentation/queue/lock.md:block 2 (paragraph)
+#: _i18n/en/documentation/queue/lock.md:block 9 (paragraph)
 msgid ""
 "If you can't move episodes around in the queue, this can be caused by either"
 " of the following:"
 msgstr ""
 
-#: _i18n/en/documentation/queue/lock.md:block 3 (unordered list)
+#: _i18n/en/documentation/queue/lock.md:block 10 (unordered list)
 msgid ""
 "`Keep Sorted` is enabled. You can disable this by tapping the three dots `…`"
 " in the top bar and select `Sort`."
 msgstr ""
 
-#: _i18n/en/documentation/queue/lock.md:block 3 (unordered list)
+#: _i18n/en/documentation/queue/lock.md:block 10 (unordered list)
 msgid ""
 "The queue is locked. You can unlock the queue by tapping on the `unlock` "
-"icon in the top bar: ![Unlocking the queue](/assets/images/documentation/{{ "
-"site.lang }}/queue-unlock.png)"
+"icon in the top bar: {{ img-queue | strip }}"
 msgstr ""
 
 #: _i18n/en/documentation/queue/multiple-queues.md:block 1 (paragraph)
