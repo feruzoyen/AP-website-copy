@@ -8,4 +8,4 @@ icon: "fas fa-sync"
 
 # {% t {{ page.title }} %}
 
-{% tf documentation/{{ page.group }}/{{ page.slug }}.md %}
+{% capture content %}{% tf documentation/{{ page.group }}/{{ page.slug }}.md %}{% endcapture %}{{content | remove: "<!-- mdpo-disable -->" | remove: "<!-- mdpo-enable -->" | remove: "<!-- mdpo-disable-next-line -->" | remove: "<!-- mdpo-enable-next-line -->" }}

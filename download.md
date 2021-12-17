@@ -4,4 +4,4 @@ title: generic.download
 permalink: /download/
 ---
 
-{% tf general/download.md %}
+{% capture content %}{% tf general/download.md %}{% endcapture %}{{content | remove: "<!-- mdpo-disable -->" | remove: "<!-- mdpo-enable -->" | remove: "<!-- mdpo-disable-next-line -->" | remove: "<!-- mdpo-enable-next-line -->" }}

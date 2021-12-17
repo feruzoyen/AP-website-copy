@@ -2,7 +2,7 @@
     <div class="container py-4">
         <div class="navbar navbar-expand-xl justify-content-between">
             <div>
-                <a href="{{ site.baseurl }}">
+                <a href="{% if site.lang == "en" %}/{% else %}{{ site.baseurl }}{% endif %}">
                     <img class="smallermobile" src="/assets/logos/logo.png" id="mainlogo" />
                 </a>
             </div>
@@ -10,7 +10,7 @@
                 <div class="navbar-nav align-items-center">
                     {% for link in site.data.navbar %}
                     <div class="nav-item ml-2">
-                        <a class="nav-link" href="{{ site.baseurl }}{{ link.url }}">{% t {{ link.key }} %}</a>
+                        <a class="nav-link" href="{% unless link.url contains 'http' %}{{ site.baseurl }}{% endunless %}{{ link.url }}">{% t {{ link.key }} %}</a>
                     </div>
                     {% endfor %}
                     <div class="nav-item ml-0 ml-sm-1 text-center">
@@ -53,7 +53,7 @@
             </div>
             <div class="overlay-content">
                 {% for link in site.data.navbar %}
-                <a href="{{ site.baseurl }}{{ link.url }}">{% t {{ link.title }} %}</a>
+                <a href="{% unless link.url contains 'http' %}{{ site.baseurl }}{% endunless %}{{ link.url }}">{% t {{ link.key }} %}</a>
                 {% endfor %}
             </div>
             <div class="overlay-footer">
