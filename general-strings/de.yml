@@ -1,3 +1,86 @@
 titles:
   about: Über Antennapod
   blog: Blog
+  contribute: Beitragen
+  documentation: Dokumentation
+  media: Medienpaket
+  privacy: Datenschutzbestimmungen
+  download: Herunterladen
+  license: Lizenz
+  forum: Forum
+generic:
+  home: Startseite
+  download: Herunterladen
+  share: Teilen
+  error: Fehler
+  redirect: Umleiten
+  subscribe: Abonnieren
+  get-on-gp: Hole es dir auf Google Play
+  accessibility:
+    lang-menu: Sprachumschalter
+    copied: Link kopiert!
+    copy-fail: Bitte kopiere die URL aus der Adressleiste.
+    share-fb: Auf Facebook teilen
+    share-md: Auf Mastodon teilen
+    share-tw: Auf Twitter teilen
+    share-eml: Per E-Mail teilen
+    copy: In die Zwischenablage kopieren
+  eml-share:
+    subject: Ich wollte, dass du dies siehst
+    body: Lies iesen Artikel
+  page-not-found-long: Die angeforderte Seite konnte nicht gefunden werden.
+  page-not-found-short: Seite nicht gefunden
+  contribute: Beitragen
+  get-on-fd: Hole es dir auf F-Droid
+month:
+  Jan: Jan
+  Feb: Feb
+  Apr: Apr
+  May: Mai
+  Jun: Jun
+  Jul: Jul
+  Sep: Sep
+  Oct: Okt
+  Nov: Nov
+  Dec: Dez
+  Mar: Mär
+  Aug: Aug
+long_month:
+  January: Januar
+  February: Februar
+  May: Mai
+  June: Juni
+  July: Juli
+  August: August
+  September: September
+  October: Oktober
+  November: November
+  December: Dezember
+  March: März
+  April: April
+homepage:
+  header: Der offene Podcast-Player
+  features:
+    adfree:
+      title: Werbefrei
+      description: Die AntennaPod-Anwendung selbst enthält keine Werbung. Wenn sich
+        ein Herausgeber dafür entscheidet, den Mediendateien Werbung hinzuzufügen,
+        erhält er 100 % der Einnahmen.
+    listenanywhere:
+      title: Höre überall
+  description: AntennaPod ist ein Podcast-Player, der völlig offen ist. Die Anwendung
+    ist quelloffen und du kannst jeden RSS-Feed abonnieren. AntennaPod wird von Freiwilligen
+    ohne kommerzielles Interesse entwickelt, so dass deine Privatsphäre respektiert
+    wird und du die volle Kontrolle hast.
+blog:
+  posted: Veröffentlicht am
+contribute:
+  translate:
+    title: Übersetzen
+    text: Du sprichst eine andere Sprache als Englisch? Hilfe uns bei der Übersetzung
+      von AntennaPod über Transifex.
+  support:
+    title: Unterstützen
+readtime:
+  singular: Min. Lesedauer
+  plural: Min. Lesedauer
