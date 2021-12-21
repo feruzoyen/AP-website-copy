@@ -1,4 +1,4 @@
-{% assign languages = site.data.languages | sort_natural: 'name' %}
+{% assign languages = site.data.locales | sort_natural: 'name' %}
 {% for language in languages %}
   {% if site.languages contains language.code %}
     <a class="dropdown-item" onchange="location = this.value;"
