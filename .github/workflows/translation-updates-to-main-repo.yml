@@ -27,7 +27,7 @@ jobs:
           languagelist=${languagelist//]}
           languagelist=${languagelist//,}
           echo $languagelist
-          # Make variable consistent between steps
+        # Make variable consistent between steps
           echo "languages=$languagelist" >> $GITHUB_ENV
       - name: Print languages
         run: |
