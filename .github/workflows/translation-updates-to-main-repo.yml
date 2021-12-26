@@ -16,6 +16,7 @@ jobs:
         # checks out your repository and downloads it to the runner, allowing you to run actions against your code
       - uses: actions/checkout@v2
       - run: git fetch --depth=1
+      - run: ls -al
       - name: Install mdpo
         run: pip install mdpo
       - name: Set languages
