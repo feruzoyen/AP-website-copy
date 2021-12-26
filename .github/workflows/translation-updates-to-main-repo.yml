@@ -17,15 +17,13 @@ jobs:
       - uses: actions/checkout@v2
       - run: git fetch --depth=1
       - run: ls -al
-      - name: Install mdpo
-        run: pip install mdpo
       - name: Set languages
         run: |
           languagelist=$(cat _config.yml | grep "languages: \[.*\]" )
           languagelist=${languagelist//'languages: ['}
           languagelist=${languagelist//]}
           languagelist=${languagelist//,}
-        # set environment variable to use between steps
+      # set environment variable to use between steps
           echo "languagelist=$languagelist" >> $GITHUB_ENV
       - name: Print languages
         run: |
