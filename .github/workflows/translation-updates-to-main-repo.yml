@@ -14,13 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         # checks out your repository and downloads it to the runner, allowing you to run actions against your code
-      - name: Get main repository
+      - name: Get main repositories
         uses: actions/checkout@v2
-      - name: Get translation files
-        #
-        uses: actions/checkout@v2
-        with:
-          ref: translation-files
+        run: git fetch --depth=1
       - name: Install mdpo
         run: pip install mdpo
       - name: Set languages
