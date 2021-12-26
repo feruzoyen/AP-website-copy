@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - translation-files
+  push:
     paths:
       - .github/workflows/translation-updates-to-main-repo.yml
   # Enable running this workflow manually from the Actions tab
