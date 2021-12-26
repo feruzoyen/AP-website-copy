@@ -27,7 +27,7 @@ jobs:
           languagelist=${languagelist//]}
           languagelist=${languagelist//,}
           echo $languagelist
-          echo "languages=languagelist" >> $GITHUB_ENV
+          echo "languages=$languagelist" >> $GITHUB_ENV
       - name: Print languages
         run: |
           echo ${{ env.languages }}
