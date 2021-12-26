@@ -19,7 +19,7 @@ jobs:
       - name: Get translation files
         uses: actions/checkout@v2
         with:
-          repository: keunes/translation-files
+          repository: AP-website-copy/translation-files
           path: _i18n/translation-files
       - name: Install mdpo
         run: pip install mdpo
