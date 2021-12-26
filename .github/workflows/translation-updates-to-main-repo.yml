@@ -25,6 +25,7 @@ jobs:
           languagelist=${languagelist//'languages: ['}
           languagelist=${languagelist//]}
           languagelist=${languagelist//,}
+          echo $languagelist
           languages=($languagelist)
       - name: Print languages
         run: |
