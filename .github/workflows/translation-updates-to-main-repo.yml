@@ -31,8 +31,8 @@ jobs:
           echo "languages=languagelist" >> $GITHUB_ENV
       - name: Print languages
         run: |
+          echo ${{ env.languages }}
           languagearray=(en nl de)
-          languagearray=(${{ env.languages }})
           for language in "${languagearray[@]}"
           do echo $language
           done
