@@ -1,0 +1,29 @@
+name: Push new & updated translations to main branch
+# Run on main branch
+
+on:
+  push:
+    branches:
+      - translation-files
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-PO:
+    name: Generate & push translated files
+    runs-on: ubuntu-latest
+    steps:
+        # checks out your repository and downloads it to the runner, allowing you to run actions against your code
+      - name: Get main repository
+        uses: actions/checkout@v2
+      - name: Get translation files
+        uses: actions/checkout@v2
+          with:
+            repository: keunes/translation-files
+            path: _i18n/translation-files
+      - name: Install mdpo
+        run: pip install mdpo
+      - name: Set languages
+        run: languagelist=$(cat _config.yml | grep "languages: \[.*\]" ); languagelist=${languagelist//'languages: ['}; languagelist=${languagelist//]}; languagelist=${languagelist//,}; languages=($languagelist)
+      - name: Print languages
+        run: for value in "${languages[@]}"; do echo $value; done
