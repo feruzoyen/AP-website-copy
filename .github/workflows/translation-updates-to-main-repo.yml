@@ -28,10 +28,11 @@ jobs:
           languagelist=${languagelist//,}
           echo $languagelist
         # set environment variable to use between steps
-        # echo "languages=$languagelist" >> $GITHUB_ENV
+          echo "languages=$languagelist" >> $GITHUB_ENV
       - name: Print languages
         run: |
           languagearray=(en nl de)
+        #  languagearray=(${{env.languages}})
           for language in "${languagearray[@]}"
           do echo $language
           done
