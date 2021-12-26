@@ -28,6 +28,7 @@ jobs:
           languagelist=${languagelist//,}
           echo $languagelist
         # set environment variable to use between steps
+          echo "languages=yellow" >> $GITHUB_ENV
       - name: Print languages
         run: |
           echo ${{ env.languages }}
