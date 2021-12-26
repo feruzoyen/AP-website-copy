@@ -18,9 +18,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Get translation files
         uses: actions/checkout@v2
-          with:
-            repository: keunes/translation-files
-            path: _i18n/translation-files
+        with:
+          repository: keunes/translation-files
+          path: _i18n/translation-files
       - name: Install mdpo
         run: pip install mdpo
       - name: Set languages
