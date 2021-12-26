@@ -1,14 +1,17 @@
-name: Push EN changes to PO in translations branch
+name: Push EN changes to translations branch
 
 on:
   push:
     branches:
       - main
+  # Only run when _i18n files are touched - see https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+    paths:
+      - _i18n/**
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
-  update-PO:
+  update-files:
     name: Update PO files
     runs-on: ubuntu-latest
     steps:
