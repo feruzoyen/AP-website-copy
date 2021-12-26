@@ -21,7 +21,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: translation-files
-          path: _i18n/translation-files
       - name: Install mdpo
         run: pip install mdpo
       - name: Set languages
