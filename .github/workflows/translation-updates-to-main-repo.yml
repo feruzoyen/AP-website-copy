@@ -32,7 +32,7 @@ jobs:
       - name: Print languages
         run: |
           languagearray=(en nl de)
-        #  languagearray=(${{env.languages}})
+        # languagearray=(${{env.languages}})
           for language in "${languagearray[@]}"
           do echo $language
           done
