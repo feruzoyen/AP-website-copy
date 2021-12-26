@@ -21,10 +21,16 @@ jobs:
         run: pip install mdpo
       - name: Set languages
         run: |
+          cat _config.yml
           languagelist=$(cat _config.yml | grep "languages: \[.*\]" )
+          echo $languagelist
           languagelist=${languagelist//'languages: ['}
+          echo $languagelist
           languagelist=${languagelist//]}
+          echo $languagelist
           languagelist=${languagelist//,}
+          echo $languagelist
           languages=($languagelist)
       - name: Print languages
         run: for value in "${languages[@]}"; do echo $value; done
+      - name: Make General pages
