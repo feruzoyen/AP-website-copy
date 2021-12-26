@@ -33,4 +33,4 @@ jobs:
           languages=($languagelist)
       - name: Print languages
         run: for value in "${languages[@]}"; do echo $value; done
-      - name: Make General pages
+      # name: Make General pages
