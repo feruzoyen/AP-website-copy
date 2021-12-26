@@ -26,8 +26,9 @@ jobs:
           languagelist=${languagelist//'languages: ['}
           languagelist=${languagelist//]}
           languagelist=${languagelist//,}
+          echo $languagelist
         # set environment variable to use between steps
-          echo "languagelist=$languagelist" >> $GITHUB_ENV
+          echo "$languagelist" >> $GITHUB_ENV
       - name: Print languages
 # needs: lang-set
         run: |
