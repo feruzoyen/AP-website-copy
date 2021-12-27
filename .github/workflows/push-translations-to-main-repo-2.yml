@@ -1,0 +1,84 @@
+name: Push translations to main branch 2
+# Run on translation-files branch
+
+on:
+  push:
+    branches:
+      - translation-files
+    paths:
+      - contribute-pages/**
+      - documentation-pages/**
+      - general-pages/**
+      - general-strings/**
+  # Enable running this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  update-PO:
+    name: Generate & push translated files
+    runs-on: ubuntu-latest
+    steps:
+        # Check out the repository and download it to the runner, allowing to run actions against the code
+      - name: Get repository
+        uses: actions/checkout@v2
+        with:
+          token: ${{secrets.PAT}}
+      - name: Get main repository
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          path: site-files
+      - run: git branch
+      - run: ls -al
+      - name: Install mdpo
+        run: pip install mdpo
+      - name: Set languages
+        id: lang-set
+        run: |
+          languagelist=$(cat site-files/_config.yml | grep "languages: \[.*\]" )
+          languagelist=${languagelist//[}
+          languagelist=${languagelist//]}
+          echo $languagelist
+          languagelist=${languagelist//'languages: '}
+          languagelist=${languagelist//,}
+          # Exclude English (source) from list of languages to update
+          languagelist=${languagelist//'en '}
+          # Make variable consistent between steps
+          echo "languages=$languagelist" >> $GITHUB_ENV
+      - name: Print languages
+        run: |
+          languages=(${{ env.languages }})
+          for language in "${languages[@]}"
+          do echo $language
+          done
+      - name: Make General pages
+        run: |
+          cd site-files/_i18n/en/general
+          echo $GITHUB_WORKSPACE
+          languages=(${{ env.languages }})
+          for language in "${languages[@]}"
+          do mkdir -p $GITHUB_WORKSPACE/files-to-copy/_i18n/$language/general
+          done
+          for file in *
+          do
+            for language in "${languages[@]}"
+            do po2md $file --po-files $GITHUB_WORKSPACE/general-pages/site-general_$language.PO --save $GITHUB_WORKSPACE/files-to-copy/_i18n/$language/general/$file
+            done
+          done
+      - name: Copy over yml files
+        run: |
+          languages=(${{ env.languages }})
+          for language in "${languages[@]}"
+          do cp general-strings/$language.yml files-to-copy/_i18n/$language.yml
+          done
+      - name: Push to translations branch
+        # see https://github.com/s0/git-publish-subdir-action
+        uses: s0/git-publish-subdir-action@v2.5.0
+        env:
+          REPO: self
+          BRANCH: main # The branch name where you want to push the assets
+          FOLDER: files-to-copy # The directory where your assets are generated
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
+          MESSAGE: "Update website with new translations 🗨💬" # The commit message
+          SKIP_EMPTY_COMMITS: true # only push commits if the contents of the target branch will be changed as a result
+          CLEAR_GLOBS_FILE: ".github/workflows/.clear-target-files" # delete items in target branch as listed in this file
