@@ -1,0 +1,5 @@
+_i18n #wipe the _i18n folder on the main branch (to delete any accidentally/manually added translations)
+!.git #required for the GitHub action to work
+#list of files & folders in main branch to keep:
+!_i18n/en/*
+!_i18n/en.yml
