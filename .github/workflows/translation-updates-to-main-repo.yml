@@ -47,6 +47,7 @@ jobs:
       - name: Make General pages
         run: |
           cd _i18n/en/general
+          languages=(${{ env.languages }})
           for file in *
           do
             for language in "${languages[@]}"
