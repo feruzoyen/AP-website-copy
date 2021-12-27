@@ -24,6 +24,7 @@ jobs:
         with:
           ref: translation-files
           path: translation-files
+          token: ${{secrets.PAT}}
       - run: git branch
       - run: ls -al
       - name: Install mdpo
