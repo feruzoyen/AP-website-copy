@@ -1,154 +1,90 @@
-## Section, menu & page titles
 titles:
-  about: "Über"
-  blog: "Blog"
-  contribute: "Contribute"
-  documentation: "Documentation"
-  download: "Download"
-  forum: "Forum"
-  license: "License"
-  privacy: "Privacy Policy"
-  media: "Media Kit"
-  license: "License"
-  privacy: "Privacy Policy"
-
-## Generic strings
+  about: Über Antennapod
+  blog: Blog
+  contribute: Beitragen
+  documentation: Dokumentation
+  media: Medienpaket
+  privacy: Datenschutzbestimmungen
+  download: Herunterladen
+  license: Lizenz
+  forum: Forum
 generic:
-  home: "Home"
-  download: "Download"
-  contribute: "Contribute"
-  view: "View All"
-  learn: "Learn More"
-  share: "Share"
-  error: "Error"
-  redirect: "Redirect"
-  subscribe: "Subscribe"
-
+  home: Startseite
+  download: Herunterladen
+  share: Teilen
+  error: Fehler
+  redirect: Umleiten
+  subscribe: Abonnieren
+  get-on-gp: Hole es dir auf Google Play
+  accessibility:
+    lang-menu: Sprachumschalter
+    copied: Link kopiert!
+    copy-fail: Bitte kopiere die URL aus der Adressleiste.
+    share-fb: Auf Facebook teilen
+    share-md: Auf Mastodon teilen
+    share-tw: Auf Twitter teilen
+    share-eml: Per E-Mail teilen
+    copy: In die Zwischenablage kopieren
+  eml-share:
+    subject: Ich wollte, dass du dies siehst
+    body: Lies iesen Artikel
+  page-not-found-long: Die angeforderte Seite konnte nicht gefunden werden.
+  page-not-found-short: Seite nicht gefunden
+  contribute: Beitragen
+  get-on-fd: Hole es dir auf F-Droid
+  view: Alle anzeigen
+  learn: Mehr erfahren
+  masto-share:
+    server: 'Geben Sie die Adresse Ihrer Instanz ein: (z.B. https://mastodon.social)'
 month:
-  Jan: "Jan"
-  Feb: "Feb"
-  Mar: "Mar"
-  Apr: "Apr"
-  May: "May"
-  Jun: "Jun"
-  Jul: "Jul"
-  Aug: "Aug"
-  Sep: "Sep"
-  Oct: "Oct"
-  Nov: "Nov"
-  Dec: "Dec"
-
+  Jan: Jan
+  Feb: Feb
+  Apr: Apr
+  May: Mai
+  Jun: Jun
+  Jul: Jul
+  Sep: Sep
+  Oct: Okt
+  Nov: Nov
+  Dec: Dez
+  Mar: Mär
+  Aug: Aug
 long_month:
-  January: "January"
-  February: "February"
-  March: "March"
-  April: "April"
-  May: "May"
-  June: "June"
-  July: "July"
-  August: "August"
-  September: "September"
-  October: "October"
-  November: "November"
-  December: "December"
-
-language:
-  select: "Language"
-
-## Homepage
+  January: Januar
+  February: Februar
+  May: Mai
+  June: Juni
+  July: Juli
+  August: August
+  September: September
+  October: Oktober
+  November: November
+  December: Dezember
+  March: März
+  April: April
 homepage:
-  header: "The Open Podcast Player"
-  description: "AntennaPod is a podcast player that is completely open. The app is open-source and you can subscribe to any RSS feed. AntennaPod is built by volunteers without commercial interest, so it respects your privacy while giving you full control."
+  header: Der offene Podcast-Player
   features:
     adfree:
-      title: "Ad-Free"
-      description: "The AntennaPod application itself does not contain ads. If a publisher chooses to add ads to the media files, they get 100% of the revenue."
+      title: Werbefrei
+      description: Die AntennaPod-Anwendung selbst enthält keine Werbung. Wenn sich
+        ein Herausgeber dafür entscheidet, den Mediendateien Werbung hinzuzufügen,
+        erhält er 100 % der Einnahmen.
     listenanywhere:
-      title: "Listen anywhere"
-      description: "With AntennaPod, you can download episodes and listen anywhere. You can even select podcasts that should be downloaded automatically."
-
-## Blog
+      title: Höre überall
+  description: AntennaPod ist ein Podcast-Player, der völlig offen ist. Die Anwendung
+    ist quelloffen und du kannst jeden RSS-Feed abonnieren. AntennaPod wird von Freiwilligen
+    ohne kommerzielles Interesse entwickelt, so dass deine Privatsphäre respektiert
+    wird und du die volle Kontrolle hast.
 blog:
-  posted: "Posted on"
-readtime:
-  singular: "min read"
-  plural: "min read"
-
-## Contribute
+  posted: Veröffentlicht am
 contribute:
-  introduction: "AntennaPod is under active development by volunteers. You can contribute too, with code or otherwise!"
   translate:
-    title: "Translate"
-    text: "You speak any other language than English? Help us translate AntennaPod via Transifex."
+    title: Übersetzen
+    text: Du sprichst eine andere Sprache als Englisch? Hilfe uns bei der Übersetzung
+      von AntennaPod über Transifex.
   support:
-    title: "Support"
-    text: "You can explain well? Help other users on our forum."
-  test:
-    title: "Test"
-    text: "You are good at breaking stuff? Become a beta tester."
-  develop:
-    title: "Develop"
-    text: "You write code? Help test pull requests or submit new features or bug fixes for the app or website."
-  promote:
-    title: "Promote"
-    text: "You draft catchy tweets, interesting blogs, or wonderful graphics? Help spread the word."
-  design:
-    title: "Design"
-    text: "You turn complex requests in understandable user stories or wireframes? Help tackle these issues."
-  donate: "Or, if you can't contribute in any of the ways listed above, you can also make a <a href=\"https://opencollective.com/antennapod\" target=\"_blank\">donation</a>."
-
-## Documentation
-documentation:
-  general:
-    introduction: "Welcome to the documentation section of the AntennaPod. This section aims to provide information on current features."
-    search-placeholder: "Search documentation"
-    no-results: "Sorry, nothing found"
-  categories:
-    getting-started:
-      title: "Getting started"
-      intro: "Welcome to AntennaPod! Below, you can find some details on how to get started with AntennaPod."
-      subscribe: "Subscribing zu eine podcast"
-      episodes-missing: "Episodes fehling"
-    general:
-      title: "General"
-      intro: "Below, you can find more details about the AntennaPod project."
-      ads: "About ads in AntennaPod"
-      backup: "Backing up your episodes"
-      beta: "Beta testing"
-      bug-report: "Reporting a bug"
-      central-distributed: "Central and distributed podcast apps"
-      donate: "Donations"
-      external-storage: "Using external storage"
-      gpodder: "How to synchronize between devices"
-    playback:
-      title: "Playback"
-      intro: "Below, you can find topics related to playback."
-      auto-rewind: "Automatic rewind"
-      crashes: "What do to when playback crashes"
-      shortcuts: "Hardware keyboard shortcuts"
-    queue:
-      title: "Queue"
-      intro: "Below, you can find frequently asked questions about the queue."
-      how-to-use: "How to use the queue"
-      lock: "Locking the queue"
-      multiple-queues: "How to use multiple queues"
-    subscriptions:
-      title: "Subscriptions"
-      intro: "Below, you can find frequently asked questions about subscriptions."
-      listening-without-subscribing: "Listening to an episode without subscribing"
-      subscription-groups: "Subscription tags (aka groups or categories)"
-    automation:
-      title: "Automation"
-      intro: "Are you an experienced user and want to automate tasks? Have a look at the pages below."
-      deletion: "Automatic deletion"
-      feed-updates: "Feed updates"
-      tasker: "3rd party integration"
-    podcasters-hosters:
-      title: "For Podcasters & Hosters"
-      intro: "Below, you can find our support information for podcasters & hosting providers."
-      add-on-antennapod: "Create an 'Open in AntennaPod' link"
-      list-podcast: "Getting your podcast listed"
-
-## Footer
-footer:
-  description: "The easy-to-use, flexible and open-source podcast manager for Android."
+    title: Unterstützen
+readtime:
+  singular: Min. Lesedauer
+  plural: Min. Lesedauer
