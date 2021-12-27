@@ -194,7 +194,7 @@ msgid "Website theme"
 msgstr ""
 
 #: _i18n/en/general/license.md:block 4 (paragraph)
-msgid "The MIT License (MIT)"
+msgid "The MIT License (MIT) applies to the website"
 msgstr ""
 
 #: _i18n/en/general/privacy.md:block 1 (paragraph)
