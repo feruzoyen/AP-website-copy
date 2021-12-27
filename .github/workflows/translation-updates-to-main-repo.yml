@@ -55,5 +55,7 @@ jobs:
           do
             for language in "${languages[@]}"
             do po2md $file --po-files ../../../translation-files/site-general_$language.PO --save ../../$language/general/$file
+            git add ../../$language/general/$file
             done
           done
+          git status
