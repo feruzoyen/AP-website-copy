@@ -59,6 +59,7 @@ jobs:
             done
           done
       - name: Stage yml files
+        run: |
           languages=(${{ env.languages }})
           for language in "${languages[@]}"
           do git add translation-files/general-strings/$language.yml
