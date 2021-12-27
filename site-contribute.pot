@@ -4,9 +4,9 @@ msgstr ""
 
 #: _i18n/en/contribute/develop.md:block 1 (paragraph)
 msgid ""
-"As a community-run project, AntennaPod relies on voluntary code "
-"contributions from a wide range of people. Not just for the app itself, but "
-"also the website and related projects."
+"As a community project, AntennaPod relies on voluntary code contributions "
+"from a wide range of people. Not just for the app itself, but also the "
+"website and related projects."
 msgstr ""
 
 #: _i18n/en/contribute/develop.md:block 2 (header)
