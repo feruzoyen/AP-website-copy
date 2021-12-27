@@ -44,4 +44,12 @@ jobs:
           for language in "${languages[@]}"
           do echo $language
           done
-# name: Make General pages
+      - name: Make General pages
+        run: |
+          cd _i18n/en/general
+          for file in *
+          do
+            for language in "${languages[@]}"
+            do po2md $file --po-files ../../../translation-files/site-general_$language.PO --save ../../$language/general/$file
+            done
+          done
