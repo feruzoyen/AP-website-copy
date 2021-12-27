@@ -5,3 +5,10 @@ titles:
   blog: Blog
   forum: Forum
   documentation: Documentatie
+  media: Media
+  license: Licentie
+  privacy: Privacybeleid
+generic:
+  download: Download
+  contribute: Bijdrage leveren
+  home: Home
