@@ -5,11 +5,8 @@ on:
   push:
     branches:
       - translation-files
-  push:
-    branches:
       - main
-    paths:
-      - .github/workflows/translation-updates-to-main-repo.yml
+  # .github/workflows/translation-updates-to-main-repo.yml
   # Enable running this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -19,8 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         # Check out the repository and download it to the runner, allowing to run actions against the code
-      - uses: actions/checkout@v2
-      - run: git fetch --depth=1
+      - name: Get repository
+        uses: actions/checkout@v2
+      - run: git checkout translation-files -- contribute-pages/
       - run: ls -al
       - name: Install mdpo
         run: pip install mdpo
