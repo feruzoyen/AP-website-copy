@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-08 23:24+0200\n"
-"PO-Revision-Date: 2021-12-27 12:52+0000\n"
+"PO-Revision-Date: 2021-12-27 13:17+0000\n"
 "Last-Translator: Keunes <keunes@mailbox.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/antennapod/"
 "website-trial-translation-branch-pot-file-contribute/nl/>\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: _i18n/en/contribute/develop.md:block 2 (header)
 msgid "1. App (Java)"
-msgstr ""
+msgstr "1. App (Java)"
 
 #: _i18n/en/contribute/develop.md:block 3 (paragraph)
 msgid ""
@@ -37,6 +37,11 @@ msgid ""
 "getting started? We welcome your contributions in our [GitHub repository]"
 "(https://github.com/AntennaPod/AntennaPod)."
 msgstr ""
+"Je bent er: de kern van het project! Gebruikt door duizenden mensen over de "
+"hele wereld, vormt jouw code een belangrijke bijdrage aan een open "
+"podcasting ecosysteem. Dus, heb je ervaring met Java, of begin je net? We "
+"verwelkomen je bijdragen in onze [GitHub repository](https://github.com/"
+"AntennaPod/AntennaPod)."
 
 #: _i18n/en/contribute/develop.md:block 4 (header)
 msgid "Where we need help"
@@ -50,6 +55,12 @@ msgid ""
 "AntennaPod/AntennaPod/projects/2). Get yourself into any of the following "
 "issues and we'll add you to our (mental) list for eternal gratitude!"
 msgstr ""
+"Er zijn een paar gebieden waar we je hulp goed kunnen gebruiken. Omdat ze "
+"belangrijk zijn, gewild zijn onder onze gebruikers of allebei. We hebben een "
+"duidelijk overzicht gemaakt van [de kwesties en functiegebieden waar we het "
+"meest hulp bij nodig hebben](https://github.com/AntennaPod/AntennaPod/"
+"projects/2). Stort jezelf in een van de volgende issues en we voegen je toe "
+"aan onze (mentale) lijst voor eeuwige dankbaarheid!"
 
 #: _i18n/en/contribute/develop.md:block 6 (paragraph)
 msgid ""
