@@ -36,6 +36,8 @@ jobs:
           echo $languagelist
           languagelist=${languagelist//'languages: '}
           languagelist=${languagelist//,}
+          # Exclude English (source) from list of languages to update
+          languagelist=${languagelist//'en '}
           # Make variable consistent between steps
           echo "languages=$languagelist" >> $GITHUB_ENV
       - name: Print languages
@@ -60,4 +62,5 @@ jobs:
           done
           git status
           cat about.md
-          gh pr create --title "Update website with new translations"
+          git commit -m "Update website with new translations"
+          git push origin main
