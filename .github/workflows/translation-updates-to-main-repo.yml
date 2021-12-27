@@ -18,6 +18,7 @@ jobs:
         # Check out the repository and download it to the runner, allowing to run actions against the code
       - name: Get repository
         uses: actions/checkout@v2
+      - run: git branch
       - run: git checkout translation-files -- contribute-pages/
       - run: ls -al
       - name: Install mdpo
