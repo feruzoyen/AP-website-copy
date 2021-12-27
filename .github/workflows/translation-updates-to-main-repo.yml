@@ -3,8 +3,11 @@ name: Push new & updated translations to main branch
 
 on:
   push:
-    branches:
-      - "translation-files"
+    paths:
+      - contribute-pages/**
+      - documentation-pages/**
+      - general-pages/**
+      - general-strings/**
   # Enable running this workflow manually from the Actions tab
   workflow_dispatch:
 
