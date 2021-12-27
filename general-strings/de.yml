@@ -32,6 +32,10 @@ generic:
   page-not-found-short: Seite nicht gefunden
   contribute: Beitragen
   get-on-fd: Hole es dir auf F-Droid
+  view: Alle anzeigen
+  learn: Mehr erfahren
+  masto-share:
+    server: 'Geben Sie die Adresse Ihrer Instanz ein: (z.B. https://mastodon.social)'
 month:
   Jan: Jan
   Feb: Feb
