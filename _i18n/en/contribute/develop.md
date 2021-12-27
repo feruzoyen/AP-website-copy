@@ -1,4 +1,4 @@
-As a community-run project, AntennaPod relies on voluntary code contributions from a wide range of people. Not just for the app itself, but also the website and related projects.
+As a community project, AntennaPod relies on voluntary code contributions from a wide range of people. Not just for the app itself, but also the website and related projects.
 
 # 1. App (Java)
 You're right at it: the core of the project! Used by thousands of people across the world, your contributions are an important contribution to an open podcasting ecosystem. So, are you experienced with Java, or just getting started? We welcome your contributions in our [GitHub repository](https://github.com/AntennaPod/AntennaPod).
