@@ -1,4 +1,4 @@
-name: Push new & updated translations to main branch
+name: Push translations to main branch
 # Run on translation-files branch
 
 on:
