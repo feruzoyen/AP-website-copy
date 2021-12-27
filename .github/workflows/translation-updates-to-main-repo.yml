@@ -60,9 +60,9 @@ jobs:
             git add ../../$language/general/$file
             done
           done
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
           git status
           cat about.md
           git commit -m "Update website with new translations"
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
           git push origin main
