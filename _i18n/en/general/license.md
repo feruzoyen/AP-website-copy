@@ -4,7 +4,7 @@ AntennaPod is licensed under the [General Public License](https://github.com/Ant
 
 # Website theme
 
-The MIT License (MIT)
+The MIT License (MIT) applies to the website
 
 <!-- mdpo-disable -->
 Copyright (c) 2020 Anxhelo Lushka 
