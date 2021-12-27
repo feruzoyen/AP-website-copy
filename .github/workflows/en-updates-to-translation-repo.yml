@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - main
-  # Only run when _i18n files are touched - see https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
+  # Only run when EN _i18n files are touched - see https://docs.github.com/en/actions/learn-github-actions/workflow-syntax-for-github-actions#filter-pattern-cheat-sheet
     paths:
-      - _i18n/**
+      - _i18n/en.yml
+      - _i18n/en/*
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
