@@ -62,8 +62,8 @@ jobs:
         run: |
           languages=(${{ env.languages }})
           for language in "${languages[@]}"
-          cp translation-files/general-strings/$language.yml _i18n/$language.yml
-          do git add _i18n/$language.yml
+          do cp translation-files/general-strings/$language.yml _i18n/$language.yml
+          git add _i18n/$language.yml
           done
       - name: Commit changes
         run: |
