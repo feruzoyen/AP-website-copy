@@ -16,10 +16,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         # Check out the repository and download it to the runner, allowing to run actions against the code
-      - name: Get repository
+      - name: Get main repository
         uses: actions/checkout@v2
+      - name: Get translation repository
+        uses: actions/checkout@v2
+        with:
+          ref: translation-files
+          path: translation-files
       - run: git branch
-      - run: git checkout translation-files -- contribute-pages/
       - run: ls -al
       - name: Install mdpo
         run: pip install mdpo
