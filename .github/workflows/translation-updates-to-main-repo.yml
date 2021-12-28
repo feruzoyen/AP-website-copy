@@ -1,10 +1,15 @@
-name: Push new & updated translations to main branch
+name: Work on main branch to pull new & updated translations from tf branch
 # Run on main branch
 
 on:
   push:
     branches:
       - 'translation-files'
+    paths:
+      - contribute-pages/**
+      - documentation-pages/**
+      - general-pages/**
+      - general-strings/**
   # Enable running this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -16,6 +21,8 @@ jobs:
         # Check out the repository and download it to the runner, allowing to run actions against the code
       - name: Get main repository
         uses: actions/checkout@v2
+        with:
+          ref: main
       - name: Get translation repository
         uses: actions/checkout@v2
         with:
@@ -43,6 +50,34 @@ jobs:
           languages=(${{ env.languages }})
           for language in "${languages[@]}"
           do echo $language
+          done
+      - name: Make Contribution pages
+        run: |
+          cd _i18n/en/general
+          languages=(${{ env.languages }})
+          for language in "${languages[@]}"
+          do mkdir -p ../../$language/general
+          done
+          for file in *
+          do
+            for language in "${languages[@]}"
+            do po2md $file --po-files ../../../translation-files/site-contribute_$language.PO --save ../../$language/contribute/$file
+            git add ../../$language/contribute/$file
+            done
+          done
+      - name: Make Documentation pages
+        run: |
+          cd _i18n/en/general
+          languages=(${{ env.languages }})
+          for language in "${languages[@]}"
+          do mkdir -p ../../$language/documentation
+          done
+          for file in *
+          do
+            for language in "${languages[@]}"
+            do po2md $file --po-files ../../../translation-files/site-documentation_$language.PO --save ../../$language/documentation/$file
+            git add ../../$language/documentation/$file
+            done
           done
       - name: Make General pages
         run: |
