@@ -67,17 +67,34 @@ jobs:
           done
       - name: Make Documentation pages
         run: |
+          # top-level md files
           cd _i18n/en/documentation
-          ls
           languages=(${{ env.languages }})
           for language in "${languages[@]}"
           do mkdir -p ../../$language/documentation
           done
-          for file in *
+          for file in *.md
           do
             for language in "${languages[@]}"
             do po2md $file --po-files ../../../translation-files/site-documentation_$language.PO --save ../../$language/documentation/$file
             git add ../../$language/documentation/$file
+            done
+          done
+          # sub-level files
+          documentation_groups=(automation general getting-started playback podcasters-hosters queue subscriptions)
+          for category in "${documentation_groups[@]}"
+          do cd
+            cd _i18n/en/documentation/$category
+            languages=(${{ env.languages }})
+            for language in "${languages[@]}"
+            do mkdir -p ../../$language/documentation/$category
+            done
+            for file in *
+            do
+              for language in "${languages[@]}"
+              do po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/$category/$file
+              git add ../../../$language/documentation/$category/$file
+              done
             done
           done
       - name: Make General pages
