@@ -49,6 +49,34 @@ jobs:
           for language in "${languages[@]}"
           do echo $language
           done
+      - name: Make Contribute pages
+        run: |
+          cd site-files/_i18n/en/contribute
+          echo $GITHUB_WORKSPACE
+          languages=(${{ env.languages }})
+          for language in "${languages[@]}"
+          do mkdir -p $GITHUB_WORKSPACE/files-to-copy/_i18n/$language/contribute
+          done
+          for file in *
+          do
+            for language in "${languages[@]}"
+            do po2md $file --po-files $GITHUB_WORKSPACE/contribute-pages/site-contribute_$language.PO --save $GITHUB_WORKSPACE/files-to-copy/_i18n/$language/contribute/$file
+            done
+          done
+      - name: Make Documentation pages
+        run: |
+          cd site-files/_i18n/en/documentation
+          echo $GITHUB_WORKSPACE
+          languages=(${{ env.languages }})
+          for language in "${languages[@]}"
+          do mkdir -p $GITHUB_WORKSPACE/files-to-copy/_i18n/$language/documentation
+          done
+          for file in *
+          do
+            for language in "${languages[@]}"
+            do po2md $file --po-files $GITHUB_WORKSPACE/documentation-pages/site-documentation_$language.PO --save $GITHUB_WORKSPACE/files-to-copy/_i18n/$language/documentation/$file
+            done
+          done
       - name: Make General pages
         run: |
           cd site-files/_i18n/en/general
@@ -69,7 +97,7 @@ jobs:
           for language in "${languages[@]}"
           do cp general-strings/$language.yml files-to-copy/_i18n/$language.yml
           done
-      - name: Push to translations branch
+      - name: Push with action to main branch
         # see https://github.com/s0/git-publish-subdir-action
         uses: s0/git-publish-subdir-action@v2.5.0
         env:
