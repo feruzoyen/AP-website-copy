@@ -56,7 +56,7 @@ jobs:
           cd _i18n/en/general
           languages=(${{ env.languages }})
           for language in "${languages[@]}"
-          do mkdir -p ../../$language/general
+          do mkdir -p ../../$language/contribute
           done
           for file in *
           do
