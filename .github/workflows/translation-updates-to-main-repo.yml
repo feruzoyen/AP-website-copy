@@ -61,13 +61,12 @@ jobs:
           for file in *
           do
             for language in "${languages[@]}"
-            do po2md $file --po-files ../../../translation-files/site-contribute_$language.PO --save ../../$language/contribute/$file
+            do po2md $file --po-files ../../../translation-files/site-contribute_$language.po --save ../../$language/contribute/$file
             git add ../../$language/contribute/$file
             done
           done
       - name: Make Documentation pages
         run: |
-          ls _i18n/en/documentation/automation
           # top-level md files
           cd _i18n/en/documentation
           languages=(${{ env.languages }})
@@ -77,7 +76,7 @@ jobs:
           for file in *.md
           do
             for language in "${languages[@]}"
-            do po2md $file --po-files ../../../translation-files/site-documentation_$language.PO --save ../../$language/documentation/$file
+            do po2md $file --po-files ../../../translation-files/site-documentation_$language.po --save ../../$language/documentation/$file
             git add ../../$language/documentation/$file
             done
           done
@@ -94,7 +93,7 @@ jobs:
             do
               for language in "${languages[@]}"
               do
-                po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/$category/$file
+                po2md $file --po-files ../../../../translation-files/site-documentation_$language.po --save ../../../$language/documentation/$category/$file
               git add ../../../$language/documentation/$category/$file
               done
             done
@@ -111,7 +110,7 @@ jobs:
           for file in *
           do
             for language in "${languages[@]}"
-            do po2md $file --po-files ../../../translation-files/site-general_$language.PO --save ../../$language/general/$file
+            do po2md $file --po-files ../../../translation-files/site-general_$language.po --save ../../$language/general/$file
             git add ../../$language/general/$file
             done
           done
