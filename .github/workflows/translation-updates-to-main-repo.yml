@@ -80,15 +80,23 @@ jobs:
             git add ../../$language/documentation/$file
             done
           done
+
           # sub-level files
           documentation_groups=(automation general getting-started playback podcasters-hosters queue subscriptions)
+          languages=(${{ env.languages }})
           for category in "${documentation_groups[@]}"
-          do cd
+          do
             cd _i18n/en/documentation/$category
-            languages=(${{ env.languages }})
+            echo "cd-ed into _i18n/en/documentation/$category"
+            ls
             for language in "${languages[@]}"
-            do mkdir -p ../../../$language/documentation/$category
+            do
+              mkdir -p ../../../$language/documentation/$category
+              echo "created _i18n(?)/$language/documentation/$category"
             done
+            echo "all language folders of $category category created:"
+            ls -d ../../../*
+            echo "now create files for $category category:"
             for file in *
             do
               for language in "${languages[@]}"
@@ -97,6 +105,8 @@ jobs:
               done
             done
           done
+          cd
+          ls -al _i18n/*/documentation/*/*
       - name: Make General pages
         run: |
           cd _i18n/en/general
