@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-08 23:24+0200\n"
-"PO-Revision-Date: 2021-12-28 13:30+0000\n"
+"PO-Revision-Date: 2021-12-28 13:46+0000\n"
 "Last-Translator: Keunes <keunes@mailbox.org>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/antennapod/"
 "website-trial-translation-branch-pot-file-contribute/nl/>\n"
@@ -147,7 +147,6 @@ msgstr ""
 "AntennaPod/antennapod.github.io)."
 
 #: _i18n/en/contribute/develop.md:block 14 (header)
-#, fuzzy
 msgid "3. Upstream & other projects"
 msgstr "3. Upstream & andere projecten"
 
@@ -168,6 +167,13 @@ msgid ""
 "[integration with AntennaPod](https://git.project-insanity.org/onny/"
 "nextcloud-app-podcast/-/issues/103) would be a very welcome addition."
 msgstr ""
+"**Nextcloud Podcast app** (Vue, PHP, Javascript) In december 2020 lanceerde "
+"Jonas Heinrich de [Nextcloud Podcast app](https://apps.nextcloud.com/apps/"
+"podcast). Het is al een geweldige manier om je te abonneren op en te "
+"luisteren naar je podcasts - online, in een zelf-gehoste omgeving. De "
+"verdere ontwikkeling ervan en [integratie met AntennaPod](https://git."
+"project-insanity.org/onny/nextcloud-app-podcast/-/issues/103) zou een zeer "
+"welkome aanvulling zijn."
 
 #: _i18n/en/contribute/develop.md:block 16 (unordered list)
 msgid ""
