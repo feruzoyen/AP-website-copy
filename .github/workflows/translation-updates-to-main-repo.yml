@@ -93,10 +93,12 @@ jobs:
             for file in *
             do
               for language in "${languages[@]}"
-              do po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/$category/$file
+              do
+                po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/$category/$file
               git add ../../../$language/documentation/$category/$file
               done
             done
+            cd ../
           done
       - name: Make General pages
         run: |
