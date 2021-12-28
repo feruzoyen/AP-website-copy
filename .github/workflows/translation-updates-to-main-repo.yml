@@ -82,21 +82,21 @@ jobs:
           done
           # sub-level files
           documentation_groups=(automation general getting-started playback podcasters-hosters queue subscriptions)
-          for category in "${documentation_groups[@]}"
-          do cd
-            cd _i18n/en/documentation/$category
+#          for category in "${documentation_groups[@]}"
+#          do cd
+            cd _i18n/en/documentation/automation
             languages=(${{ env.languages }})
             for language in "${languages[@]}"
-            do mkdir -p ../../../$language/documentation/$category
+            do mkdir -p ../../../$language/documentation/automation
             done
             for file in *
             do
               for language in "${languages[@]}"
-              do po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/$category/$file
-              git add ../../../$language/documentation/$category/$file
+              do po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/automation/$file
+              git add ../../../$language/documentation/automation/$file
               done
             done
-          done
+#          done
       - name: Make General pages
         run: |
           cd _i18n/en/general
