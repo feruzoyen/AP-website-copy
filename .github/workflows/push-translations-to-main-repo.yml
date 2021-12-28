@@ -1,4 +1,4 @@
-name: Push translations to main branch
+name: Work on tf branch to push translations to main
 # Run on translation-files branch
 
 on:
