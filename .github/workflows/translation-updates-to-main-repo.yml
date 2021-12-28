@@ -67,7 +67,7 @@ jobs:
           done
       - name: Make Documentation pages
         run: |
-          ls _i18n/documentation
+          ls _i18n/en/documentation
           # top-level md files
           cd _i18n/en/documentation
           languages=(${{ env.languages }})
