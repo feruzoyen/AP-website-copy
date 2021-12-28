@@ -83,16 +83,19 @@ jobs:
           done
           # sub-level files
           documentation_groups=(automation general getting-started playback podcasters-hosters queue subscriptions)
-          cd automation
-          languages=(${{ env.languages }})
-          for language in "${languages[@]}"
-          do mkdir -p ../../../$language/documentation/automation
-          done
-          for file in *
+          for category in "${documentation_groups[@]}"
           do
+            cd $category
+            languages=(${{ env.languages }})
             for language in "${languages[@]}"
-            do po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/automation/$file
-            git add ../../../$language/documentation/automation/$file
+            do mkdir -p ../../../$language/documentation/$category
+            done
+            for file in *
+            do
+              for language in "${languages[@]}"
+              do po2md $file --po-files ../../../../translation-files/site-documentation_$language.PO --save ../../../$language/documentation/$category/$file
+              git add ../../../$language/documentation/$category/$file
+              done
             done
           done
       - name: Make General pages
