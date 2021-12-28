@@ -82,8 +82,8 @@ jobs:
             done
           done
           # sub-level files
-          echo "starting sub-level files"
           documentation_groups=(automation general getting-started playback podcasters-hosters queue subscriptions)
+          cd
           cd _i18n/en/documentation/automation
           languages=(${{ env.languages }})
           for language in "${languages[@]}"
